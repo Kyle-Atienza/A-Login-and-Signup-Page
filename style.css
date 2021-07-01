@@ -1,0 +1,297 @@
+@font-face{
+    font-family: 'Gotham Book';
+    src: url(font/Gotham-Book.otf);
+}
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url(font/GOTHAM-BOLD.TTF);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Gotham Book;
+    box-sizing: border-box;
+}
+
+
+/* variables */
+:root{
+    --icon_size: 2.5rem;
+
+    --dark: #1E2559;
+    --primary: #C73D37;
+    --light: #ededed;
+}
+
+
+
+/* global */
+
+.eye, .indicator{
+    position: absolute;
+    transform: translate(-130%, 50%);
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.indicator{
+    color: lightgrey;
+}
+
+/* button{
+    border-radius: 10px;
+} */
+
+
+
+/* typography */
+
+label{
+    letter-spacing: 0.155em;
+    /* font-size: .8rem; */
+    font-size: .7rem;
+}
+
+p{
+    font-size: .7rem;
+
+}
+/* li{
+    letter-spacing: 0.155em;
+    font-size: 1rem;
+} */
+
+
+
+
+body{
+
+
+    background-image: url("img/pexels-dids-3530056.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+
+}
+
+
+/* .nav-bar{
+    background-color: white;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.content{
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+
+}
+
+.fill-up{
+    background-color: var(--light);
+    /* border: 1px var(--light) solid; */
+    box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.6);
+    
+    width: 25vw;
+    min-width: 300px;
+    min-height: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    /* color: #fff; */
+
+}
+
+
+
+
+/* tabs */
+.fill-up .tabs ul{
+    display: flex;
+}
+.fill-up .tabs ul>*{
+    flex-basis: 100%;
+    display: grid;
+    place-items: center;
+    list-style: none;
+    padding: 20px 0;
+}
+.fill-up .tabs li{
+    background: #c5c5c5;
+
+    font-family: Gotham Bold;
+    font-size: 1.2rem;
+    color: #777777;
+}
+.fill-up .tabs .active{
+    background: var(--light);
+    font-family: Gotham Bold;
+    color: black;
+    
+    
+}
+
+
+
+
+
+.forms{
+    display: flex;
+    width: 200%;
+    transition: transform .3s ease-in-out;
+    /* height: 100%; */
+    flex-grow: 1;
+
+    padding: 30px 0;
+
+    transform: translateX(0%); 
+}
+.forms>*{
+    width: 100%;
+    padding: 0 4rem;
+}
+.forms .message{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.forms .message:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 8px;
+    border-bottom: 1px solid black;
+}
+
+/* .forms:hover{
+    transform: translateX(-50%);
+} */
+
+
+
+
+
+.form{
+    /* padding: 30px 4em 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+    /* transition: all .3s ease-in-out; */
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    /* padding: 20px; */
+}
+    .form .password-login p{
+        cursor: pointer;
+        text-align: center;
+        /* margin: 0 auto; */
+    }
+
+input{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 0 5px 0 5px;
+
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: none;
+}
+input:focus{
+    outline: none;
+    border: 1px var(--dark) solid;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    /* background: #fff; */
+}
+
+#indicator-email,
+#indicator-confirm{
+    opacity: 0;
+}
+
+.register-socials .socials{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-around;
+}
+.register-socials p{
+    margin-bottom: 10px;
+}
+    .register-socials .socials li{
+        list-style: none;
+        padding: .5em;
+        height: var(--icon_size);
+        width: var(--icon_size);
+        border-radius: 100px;
+
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        /* border-radius: 100px; */
+
+    }
+
+    .register-socials .google{
+        background-color: #DB4437;
+        color: #fff;
+    }
+    .register-socials .facebook{
+        background-color: #1877F2;
+        color: #fff;
+    }
+    /* .register-socials .google{
+        background: url(img/google-logo.svg);
+        background-size: cover;
+    }
+    .register-socials .facebook{
+        background: url(img/facebook-icon.svg);
+        background-size: cover;
+    } */
+
+
+
+
+
+
+.form .submit{
+    align-self: center;
+    margin: auto 0;
+    
+    padding: 10px 1em;
+
+    font-family: Gotham Bold;
+    font-size: 1.5rem;
+    /* letter-spacing: 0.155em; */
+    color: var(--dark);
+
+    border-radius: 100px;
+    border: 1px var(--dark) solid;
+    /* background: var(--dark); */
+    transition: transform .1s ease-out;
+    
+}
+.form .submit:hover{
+    transform: scale(1.1);
+}
+
+

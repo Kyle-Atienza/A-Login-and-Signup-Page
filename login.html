@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Los Angeles Jewelery | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/8fd6ea3e93.js" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    <!-- <div class="nav-bar">
+        <img src="img/logo.svg" alt="">
+    </div> -->
+
+    <div class="content">
+
+        <!-- <form action="/" class="form"></form>
+
+        <div class="input-box">
+            <div class="inputs">
+                <div class="input">
+                    <div class="email-label">
+                        <p>EMAIL ADRESS</p>
+                        <p class="email-alert"></p>
+                    </div>
+                    <input class="email" type="text" onkeyup="validateEmail()" required>
+                    <span id="verify-email" class="indicator"><i class="fas fa-circle"></i></span>
+                </div>
+                <div class="input">
+                    <p>PASSWORD</p>
+                    <input id="password" type="password" required>
+                    <span class="eye"><i id="eye"  class="fas fa-eye" onclick="showhidePassword()"></i></span>
+                </div>
+                <button type="submit" class="login-btn">LOGIN</button>
+            </div>
+        </div>
+
+        </form> -->
+
+        <section class="fill-up">
+            <div class="tabs">
+                <ul>
+                    <li onclick="showLogin()" class="login-tab active">Login</li>
+                    <li onclick="showSignup()" class="signup-tab">Sign-up</li>
+                </ul>
+            </div>
+            <div class="forms">
+
+                <div class="form login">
+                    <p class="message">Welcome Back!</p>
+                    <form action="">
+                        <div class="email">
+                            <label for="email">EMAIL ADDRESS</label>
+                            <input name="email" class="email" type="text" onkeyup="validateEmail()" required>
+                        </div>
+                        <div class="password-login">
+                            <label for="password">PASSWORD</label>
+                            <input name="password" class="password" type="password" required>
+                            <span class="eye"><i id="eye"  class="fas fa-eye" onclick="showhidePassword('.password-login')"></i></span>
+                            <p>Forgot Password?</p>
+                        </div>
+                        <button type="submit" class="submit">Login</button>
+                    </form>
+                </div>
+
+                <div class="form signup">
+                    <p class="message">Hi! Nice to Meet You</p>
+                    
+                    <form action="">
+                        <div class="email">
+                            <label for="email">EMAIL ADDRESS </label> <span><i id="indicator-email" class="fas fa-circle"></i></span>
+                            
+                            <input name="email" class="email" type="text" onkeyup="validateEmail()" required>
+                        </div>
+                        <div class="password-signup">
+                            <label for="password">PASSWORD</label>
+                            
+                            <input name="password" class="password" type="password" onkeyup="confirmPassword()" required>
+                            <span class="eye"><i id="eye"  class="fas fa-eye" onclick="showhidePassword('.password-signup')"></i></span>
+                        </div>
+                        <div class="confirm-password-signup">
+                            <label for="password">CONFIRM PASSWORD </label>
+                            <input name="password" class="password" type="password" onkeyup="confirmPassword()" required>
+                            <span class="eye"><i id="eye"  class="fas fa-eye" onclick="showhidePassword('.confirm-password-signup')" ></i></span>
+                        </div>
+
+                        <button type="submit" class="submit" disabled>Register</button>
+                    </form>
+
+                    <div class="register-socials">
+                        <p>Or create account using</p>
+                        <ul class="socials">
+                            <li class="google">
+                                <i class="fab fa-google"></i>
+                                <!-- <img src="img/google-logo.svg" alt=""> -->   
+                            </li>
+                            <li class="facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <!-- <img src="img/facebook-icon.svg" alt=""> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
